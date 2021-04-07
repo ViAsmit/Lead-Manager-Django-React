@@ -28,7 +28,7 @@ SECRET_KEY = '(3n$$-$-w2o5@*5i#@z&jct*frs6hty3rp3o3d1f%r^zh1za09'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'lead-manager-django.herokuapp.com']
 
 
 # Application definition
@@ -86,9 +86,18 @@ WSGI_APPLICATION = 'leadmanager.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'daihcbd9tp573k',
+        'USER': 'ijdjzgusthywag',
+        'PASSWORD': '18bbe6975501a0ee7a8a524132f50c726e8432b3b0090a907d294a8999b8583b',
+        'HOST': 'ec2-18-204-101-137.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
